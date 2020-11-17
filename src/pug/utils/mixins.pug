@@ -1,0 +1,23 @@
+mixin commercial(type, text)
+  div(class='commercial ' + type)
+    h2.commercial__title= text
+
+mixin news-info(date, views)
+  .news-info
+    span.news-info__date= date
+    span.news-info__views
+      //include ../../assets/img/icons/eye.svg
+      span= views
+
+mixin news-tag(title, className)
+  div(class='news-tag ' + className)= title
+
+mixin nav-item(title, link)
+  li
+    a(href=link)= title
+
+mixin phone(className)
+  a(href='tel:84845840910', class=className)= '8 48458 4 09 10'
+
+mixin email(className)
+  a(href='mailto:tc-obnimi@mail.ru', class=className)= 'tc-obnimi@mail.ru'

@@ -1,0 +1,47 @@
+.footer {
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		border-top: 1px solid #101113;
+		padding: 0 0;
+		padding-top: $level4;
+	}
+
+	&__info {
+		&-copyright {
+			margin-bottom: 10px;
+		}
+		&-bottom {
+			display: flex;
+			&__img {
+				margin-right: 16px;
+			}
+			&__description {
+				white-space: pre;
+				font-size: 14px;
+			}
+		}
+	}
+
+	&__nav {
+		& ul {
+			& li {
+				& a {
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+
+	&__soc {
+
+	}
+
+	&__info {
+
+	}
+
+	&__subscribe {
+		background: $blue;
+	}
+}

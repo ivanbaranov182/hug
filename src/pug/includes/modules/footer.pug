@@ -1,0 +1,34 @@
+- const footerNav = [{"title": "о центре","link": "/"},{"title": "Магазины","link": "/"},{"title": "Еда","link": "/"},{"title": "Сервис","link": "/"},{"title": "Развлечения","link": "/"},{"title": "Для детей","link": "/"},{"title": "Аренда","link": "/"},{"title": "Безопасность","link": "/"},{"title": "Контакты","link": "/"}];
+- const footerSocials = [{"name": "fb","icon": "/assets/img/fb.svg"},{"name": "vk","icon": "/assets/img/vk.svg"},{"name": "tg","icon": "/assets/img/tg.svg"},{"name": "tw","icon": "/assets/img/tw.svg"}];
+
+footer.footer
+  .container
+    .footer__wrapper
+      .footer__logo
+        img(src="/assets/img/logo.svg")
+      nav.footer__nav
+        ul
+          each item in footerNav
+            +nav-item(item.title, item.link)
+      .footer__soc
+      .footer__info
+        +phone('footer__info-phone')
+        +email('footer__info-email')
+        .footer__info-block
+          |1 этаж:
+          br
+          |09:00 – 22:00
+        .footer__info-block
+          |2 этаж:
+          br
+          |10:00 – 22:00
+        .footer__info-block
+          |Калужская обл., г.
+          br
+          |Обнинск, ул. Курчатова,
+          br
+          |д.55
+
+
+
+      .footer__subscribe
