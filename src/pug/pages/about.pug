@@ -1,0 +1,40 @@
+extends ../layout/main
+
+block variables
+  - const title = 'ТЦ Обними | test';
+  - const description = 'ТЦ Обними | description';
+  - const pageClass = 'about-page';
+
+block content
+  .container
+    include ../includes/modules/breadcrumbs
+    h1.h1= 'О торговом центре'
+    .h3.subtitle= 'Торговый Центр «ОБНИМИ» - место силы, развлечений и шопинга для всей семьи!'
+
+    .about__buttons
+      .button._white.about__buttons-item._active
+        |О нас
+      .button._white.about__buttons-item
+        |Новости
+      .button._white.about__buttons-item
+        |События
+      .button._white.about__buttons-item
+        |Фотогалерея
+
+    .about__description
+      .about__description-text
+        p= 'ТЦ «ОБНИМИ» открыл свои двери для посетителей 1 июня 2019 года'
+        p= 'На площади 24 000 кв.м расположены : гиперамаркет, обувные магазины, магазины одежды, салоны связи, аптека, детские развлекательные центры, зоомагазин, парикмахерские, зона фуд - корта  и многое другое.'
+        p= 'Миссия ТЦ – мы помогаем людям получить новое качество жизни, предлагая доступный шопинг и развлечения для всей семьи.'
+        p= 'ТЦ «ОБНИМИ» - это семейный Торговый Центр, это ощущение праздника, всегда яркие и добрые эмоции.'
+      .about__description-link
+        |Схема ТЦ
+        br
+        |Обними
+        .about__description-icon
+          include ../../assets/img/arrow-diagonal-top.svg
+
+    +about-slider('about__slider')
+    +advantages('about__advantages')
+
+    include ../includes/modules/shops-bottom

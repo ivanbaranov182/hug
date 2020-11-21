@@ -1,0 +1,85 @@
+.about-slider {
+  overflow: initial;
+
+  &__item {
+    width: 649px;
+  }
+
+  &__image {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    margin-bottom: $level6;
+    & img {
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      right: -50%;
+      bottom: -50%;
+      margin: auto;
+    }
+  }
+
+  &__description {
+    color: $black;
+  }
+
+  & .swiper-wrapper {
+    margin-bottom: $level3;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:hover {
+      & .swiper-scrollbar-drag {
+        top: -2px;
+        height: 4px;
+      }
+    }
+
+    & .swiper-scrollbar {
+      height: 1px;
+      background: $light-grey;
+
+      & .swiper-scrollbar-drag {
+        background: $black;
+        cursor: pointer;
+        transition: 0.1s;
+      }
+    }
+
+    & .about-slider__arrow {
+        position: relative;
+        top: initial;
+        left: initial;
+        right: initial;
+        margin-top: 0;
+        width: 59px;
+        height: 14px;
+
+        & svg {
+          color: $black;
+          transition: 0.3s;
+        }
+
+        &:hover {
+          & svg {
+            color: $light-blue;
+          }
+        }
+
+        &::after {
+          display: none;
+        }
+      }
+  }
+
+  &__scroll{
+    width: 85%;
+  }
+}

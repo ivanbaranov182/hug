@@ -1,15 +1,8 @@
-- const headerNav = [{"title": "о центре","link": "/"},{"title": "Магазины","link": "/"},{"title": "Еда","link": "/"},{"title": "Сервис","link": "/"},{"title": "Развлечения","link": "/"},{"title": "Для детей","link": "/"},{"title": "Аренда","link": "/"},{"title": "Безопасность","link": "/"},{"title": "Контакты","link": "/"}];
+- const headerNav = [{"title": "о центре","link": "/about.html"},{"title": "Магазины","link": "/shops.html"},{"title": "Еда","link": "/"},{"title": "Сервис","link": "/"},{"title": "Развлечения","link": "/"},{"title": "Для детей","link": "/"},{"title": "Аренда","link": "/"},{"title": "Безопасность","link": "/"},{"title": "Контакты","link": "/contacts.html"}];
 
-header.header
-  .container-fluid
-    .header__wrapper
-      .header__logo
-        img(src="/assets/img/logo.svg")
-      nav.header__nav
-        ul
-          each item in headerNav
-            +nav-item(item.title, item.link)
-      .header__info
-        +phone('header__info-phone')
-        +email('header__info-email')
-        .header__info-time= '9:00 - 22:00'
+case headerType
+  when 'slider'
+    include ./header-slider
+  default
+    include ./header-default
+

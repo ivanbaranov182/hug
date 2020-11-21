@@ -1,0 +1,14 @@
+.advantages {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  &__item {
+    width: 236px;
+    margin: 0 55px;
+
+    &-icon {
+      margin-bottom: $level5;
+    }
+  }
+}

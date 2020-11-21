@@ -1,0 +1,16 @@
+- const aboutIndexSlider = [{"img": "/assets/img/about-index/1.png"},{"img": "/assets/img/about-index/2.png"},{"img": "/assets/img/about-index/3.png"},{"img": "/assets/img/about-index/1.png"},{"img": "/assets/img/about-index/2.png"},{"img": "/assets/img/about-index/3.png"},{"img": "/assets/img/about-index/1.png"},{"img": "/assets/img/about-index/2.png"},{"img": "/assets/img/about-index/3.png"},{"img": "/assets/img/about-index/1.png"},{"img": "/assets/img/about-index/2.png"},{"img": "/assets/img/about-index/3.png"},{"img": "/assets/img/about-index/1.png"},{"img": "/assets/img/about-index/2.png"},{"img": "/assets/img/about-index/3.png"}];
+
+section.about-index
+  .container
+    .h2= 'О нас'
+    .about-index__description
+      .about-index__description-left
+        .about-index__title.title
+          span= 'торговый центр'
+          | обними
+      .about-index__description-right
+        p= 'Новый современный торговый центр, расположенный в городе Обнинск, на пересечении главных магистралей города проспекта Маркса и ул. Курчатова, вблизи остановок общественного транспорта.'
+        p= 'Общая площадь торгового центра составляет 24 000 кв.м, наземная парковка на 500 м/мест.'
+        p= 'Якорными арендаторами ТЦ выступают: гипермаркет Карусель, парк развлечений «Космостар», батутный центр №1 , «Zolla», «Sinsay» , «Zenden», «Megatop», оптика «Оптимист», магазин «Женские штучки», магазин бытовой техники «DNS», «Burger King», «HOT DOGGER», 4 лапы, «Flower Room», «Порядок», МТС, TELE2'
+
+    +about-slider('about-index__slider')

@@ -1,0 +1,45 @@
+.about {
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+
+    &-item {
+      margin-right: 24px;
+    }
+  }
+
+  &__description {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $level2;
+
+    &-text {
+      width: 70%;
+    }
+
+    &-link {
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      width: 176px;
+      height: 176px;
+      border: 1px solid $black;
+      padding: 20px 24px;
+    }
+
+    &-icon {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+  }
+
+  &__slider {
+    margin-bottom: 136px;
+  }
+
+  &__advantages {
+
+  }
+}

@@ -1,0 +1,22 @@
+- const filters = [{"icon": "/assets/img/filters/shirt.svg"},{"icon": "/assets/img/filters/boots.svg"},{"icon": "/assets/img/filters/diamond.svg"},{"icon": "/assets/img/filters/food.svg"},{"icon": "/assets/img/filters/paw.svg"},{"icon": "/assets/img/filters/makeup.svg"},{"icon": "/assets/img/filters/health.svg"},{"icon": "/assets/img/filters/computer.svg"},{"icon": "/assets/img/filters/wand.svg"},{"icon": "/assets/img/filters/card.svg"},{"icon": "/assets/img/filters/sim.svg"}];
+
+.filter
+  .filter__block.filter-list.sales-index__filters
+    each filter in filters
+      a.filter-list__item.sales-index__filters-item(href='/')
+        img(src= filter.icon)
+
+  .filter__block
+    .__select
+      .__select__title
+      .__select__content
+        input.__select__input(type='radio', name='singleSelect', data-value='Option 0')
+        label.__select__label= "Option 0"
+        input.__select__input(type='radio', name='singleSelect', data-value='Option 0')
+        label.__select__label= "Option 1"
+
+  .filter__block
+    label.checkbox
+      input(type='checkbox')
+      span
+      |Акции и скидки

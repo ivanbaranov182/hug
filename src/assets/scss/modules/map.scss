@@ -1,0 +1,54 @@
+.map {
+  border: 1px solid $black;
+  border-top: none;
+  border-left: none;
+  padding: 0 50px 50px 0;
+  position: relative;
+  overflow: hidden;
+
+  &__info {
+    position: absolute;
+    top: -80px;
+    left: -195px;
+    display: block;
+    background: $white;
+    height: 590px;
+    width: 590px;
+    border-radius: 100%;
+    padding-left: 195px;
+    padding-top: 133px;
+    padding-right: 90px;
+
+    &:before {
+      content: '';
+      position: absolute;
+    }
+
+    &-phone {
+      display: block;
+      font-size: 36px;
+      font-weight: 600;
+      line-height: 50.4px;
+      color: $black;
+      margin-bottom: 24px;
+    }
+
+    &-email {
+      display: block;
+      color: $black;
+      margin-bottom: 40px;
+    }
+
+    &-how {
+      width: 188px;
+    }
+
+    &-title {
+      text-transform: initial;
+    }
+
+    &-data {
+      color: $grey;
+    }
+  }
+}

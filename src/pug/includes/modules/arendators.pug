@@ -1,0 +1,11 @@
+- const arendators = [{"title": "Карусель"},{"title": "Батутный центр №1"},{"title": "Zolla"},{"title": "Семейный парк развлечений \"Космостар\""},{"title": "порядок"},{"title": "мтс"},{"title": "теле-2"},{"title": "мегафон"},{"title": "DNS"},{"title": "Zenden"},{"title": "Health Farm"},{"title": "Оптимист"},{"title": "Megatop"},{"title": "Воображуля"},{"title": "Baby Dreams"},{"title": "Flower Room"},{"title": "Четыре Лапы"},{"title": "Redmond"},{"title": "Женские штучки"},{"title": "EMMI"},{"title": "Х-Орех"},{"title": "IQOS"},{"title": "Help mob сервис"},{"title": "Чистая Линия"},{"title": "HotDogger"},{"title": "Burger King"},{"title": "Сбербанк"},{"title": "Тинькофф банк"}];
+
+section.arendators
+  .arendators__title.title
+    span= 'наши'
+    |арендаторы
+  ul.arendators__list
+    .arendators__list-img(style='background-image: url(/assets/img/arendators-background.png)')
+    each arendator in arendators
+      li.arendators__item
+        a(href='/')= arendator.title

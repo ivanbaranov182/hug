@@ -1,34 +1,54 @@
-- const footerNav = [{"title": "о центре","link": "/"},{"title": "Магазины","link": "/"},{"title": "Еда","link": "/"},{"title": "Сервис","link": "/"},{"title": "Развлечения","link": "/"},{"title": "Для детей","link": "/"},{"title": "Аренда","link": "/"},{"title": "Безопасность","link": "/"},{"title": "Контакты","link": "/"}];
-- const footerSocials = [{"name": "fb","icon": "/assets/img/fb.svg"},{"name": "vk","icon": "/assets/img/vk.svg"},{"name": "tg","icon": "/assets/img/tg.svg"},{"name": "tw","icon": "/assets/img/tw.svg"}];
+- const footerNav = [{"title": "о центре","link": "/about.html"},{"title": "Магазины","link": "/shops.html"},{"title": "Еда","link": "/"},{"title": "Сервис","link": "/"},{"title": "Развлечения","link": "/"},{"title": "Для детей","link": "/"},{"title": "Аренда","link": "/"},{"title": "Безопасность","link": "/"},{"title": "Контакты","link": "/contacts.html"}];
+- const footerSocials = [{"name": "Facebook","link": "/"},{"name": "vkontakte","link": "/"},{"name": "instagram","link": "/"}];
 
 footer.footer
   .container
     .footer__wrapper
-      .footer__logo
-        img(src="/assets/img/logo.svg")
-      nav.footer__nav
-        ul
-          each item in footerNav
-            +nav-item(item.title, item.link)
-      .footer__soc
-      .footer__info
-        +phone('footer__info-phone')
-        +email('footer__info-email')
-        .footer__info-block
-          |1 этаж:
-          br
-          |09:00 – 22:00
-        .footer__info-block
-          |2 этаж:
-          br
-          |10:00 – 22:00
-        .footer__info-block
-          |Калужская обл., г.
-          br
-          |Обнинск, ул. Курчатова,
-          br
-          |д.55
-
-
-
-      .footer__subscribe
+      .footer__right
+        .footer__right-top
+          .footer__logo
+            include ../../../assets/img/footer-logo.svg
+          nav.footer__nav
+            ul
+              each item in footerNav
+                +nav-item(item.title, item.link)
+          .footer__socials
+            each soc in footerSocials
+              a.footer__socials-item.link(href=soc.link)= soc.name
+            a.button._white.footer__socials-how(href='/how.html')
+              include ../../../assets/img/icons/running-man.svg
+              |Как добраться
+          .footer__info
+            .footer__info-block._block1
+              +phone('footer__info-phone')
+              +email('footer__info-email')
+            .footer__info-block._block2
+              |1 этаж:
+              br
+              |09:00 – 22:00
+            .footer__info-block._block3
+              |2 этаж:
+              br
+              |10:00 – 22:00
+            .footer__info-block
+              |Калужская обл., г.
+              br
+              |Обнинск, ул. Курчатова,
+              br
+              |д.55
+        .footer__right-bottom
+          a.footer__right-policy(href='/')= 'Политика конфиденциальности'
+          .footer__right-producer
+            |Разработка сайта -
+            a(href='https://dialweb.ru/', target='_blank')='Dial Digital Agency'
+      form.footer__subscribe.form
+        .form__title
+          include ../../../assets/img/icons/title-bell.svg
+          | Будь в курсе
+        .form__description= 'актуальных акций и событий'
+        input.form__input.input._white(placeholder='Оставьте ваш email')
+        .form__policy
+          |Нажимая “Подписаться” соглашаюсь с правилами
+          <br />
+          |обработки персональных данных
+        button.form__button.button(type='submit')= 'Подписаться'

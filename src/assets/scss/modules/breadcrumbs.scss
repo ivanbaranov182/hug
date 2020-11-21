@@ -1,0 +1,17 @@
+.breadcrumbs {
+
+  &__item {
+    color: $grey;
+
+    &:after {
+      content: '-';
+      padding: 0 20px;
+    }
+
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+- const filters = [{"icon": "/assets/img/filters/shirt.svg"},{"icon": "/assets/img/filters/boots.svg"},{"icon": "/assets/img/filters/wand.svg"},{"icon": "/assets/img/filters/food.svg"},{"icon": "/assets/img/filters/paw.svg"},{"icon": "/assets/img/filters/makeup.svg"},{"icon": "/assets/img/filters/health.svg"},{"icon": "/assets/img/filters/card.svg"}];
+- const salesIndex = [{"partner": "DNS","title": "Рассрочка или бонусы 0-0-24 или 10%","description": "На холодильники и стиральные пашины LG"},{"partner": "Zolla","title": "Распродажа и скидки до 70%","description": "На коллекцию Весна-Лето 2020"},{"partner": "Четыре лапы","title": "Обнови защиту от блох и клещей","description": "до -50%"},{"partner": "DNS","title": "Рассрочка или бонусы 0-0-24 или 10%","description": "На холодильники и стиральные пашины LG"},{"partner": "DNS","title": "Рассрочка или бонусы 0-0-24 или 10%","description": "На холодильники и стиральные пашины LG"},{"partner": "Zolla","title": "Распродажа и скидки до 70%","description": "На коллекцию Весна-Лето 2020"},{"partner": "Четыре лапы","title": "Обнови защиту от блох и клещей","description": "до -50%"},{"partner": "DNS","title": "Рассрочка или бонусы 0-0-24 или 10%","description": "На холодильники и стиральные пашины LG"}];
+
+section.sales-index
+  .container
+    .sales-index__top
+      .sales-index__title.title
+        span= 'Скидки'
+        |и акции
+      .filter-list.sales-index__filters
+        each filter in filters
+          a.filter-list__item.sales-index__filters-item(href='/')
+            img(src= filter.icon)
+      .sales-index__buttons
+        button.swiper-button-prev.round-button.sales-index__button._left
+          include ../../../assets/img/icons/slider-arow-left.svg
+        button.swiper-button-next.round-button.sales-index__button._right
+          include ../../../assets/img/icons/slider-arow-right.svg
+
+    .swiper-container.sales-index__slider
+      .swiper-wrapper
+        each slide in salesIndex
+          .swiper-slide.sales-index__slider-item
+            .sales-index__slider-partner= slide.partner
+            .sales-index__slider-info
+              .sales-index__slider-title= slide.title
+              .sales-index__slider-description= slide.description
+            a.sales-index__slider-link(href='/')
+              include ../../../assets/img/icons/slider-arow-right.svg

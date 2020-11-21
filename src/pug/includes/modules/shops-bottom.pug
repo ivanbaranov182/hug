@@ -1,0 +1,10 @@
+- const shopList = [{"icon": "/assets/img/filters/shirt.svg","title": "магазины","text": "Одежда и обувь, подарки и аксессуары, товары для спорта и отдыха. Тысячи предложений ждут вас"},{"icon": "/assets/img/filters/food.svg","title": "Где поесть","text": "Загляните в уютные кафе и рестораны. Здесь вы сможете подкрепиться, отдохнуть, провести время с близкими"},{"icon": "/assets/img/filters/services.svg","title": "Наши сервисы","text": "Воспользуйтесь сервисами нашего ТЦ: Такси, Прокат, Станции зарядки, Буккроссинг, Банкоматы"},{"icon": "/assets/img/filters/wand.svg","title": "Развлечения","text": "Любые развлечения на любой вкус для взрослых и детей подарят массу незабываемых эмоций"},{"icon": "/assets/img/filters/child.svg","title": "Для детей","text": "У нас вы найдете любые товары для детей, а также детская парикхмахерская, детский городок и др"}];
+
+.shops-bottom
+  each shop in shopList
+    .shops-bottom__item
+      .shops-bottom__item-img
+        img(src= shop.icon)
+      .shops-bottom__item__description
+        .shops-bottom__item-title= shop.title
+        .shops-bottom__item-text= shop.text

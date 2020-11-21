@@ -1,0 +1,29 @@
+.about-index {
+  overflow: hidden;
+  &__title {
+    margin-bottom: 0;
+    & span {
+      font-size: 38px;
+      white-space: nowrap;
+      line-height: 1;
+    }
+  }
+
+  &__description {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: $level2;
+
+    &-left {
+      width: 50%;
+      height: 100%;
+      display: flex;
+    }
+
+    &-right {
+      width: 50%;
+      column-count: 2;
+      column-gap: 61px
+    }
+  }
+}

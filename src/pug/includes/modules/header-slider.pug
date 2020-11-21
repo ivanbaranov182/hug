@@ -1,0 +1,43 @@
+- const headerSocials = [{"title": "Facebook"},{"title": "vkontakte"},{"title": "youtube"}];
+
+header.header._w-bg
+  .header__top
+    a(href='/').header__logo
+      include ../../../assets/img/logo.svg
+    include ./header__nav
+    include ./header__info
+  .header__bottom
+    .header__slider-actions
+      .swiper-button-prev.header__slider-arrow.header__slider-arrow_prev
+        include ../../../assets/img/icons/arrow-top.svg
+      .swiper-pagination.header__slider-pagination
+      .swiper-button-next.header__slider-arrow.header__slider-arrow_next
+        include ../../../assets/img/icons/arrow-down.svg
+    .swiper-container.header__slider
+      .swiper-wrapper
+        .swiper-slide.header__slider-item(style= 'background: url(/assets/img/header/1.png)')
+          .header__slider-info
+            .h2.header__slider-subtitle= 'Торговый центр'
+            .header__slider-title= 'обними'
+            .header__slider-description
+              |Место силы,
+              br
+              |развлечений и шопинга
+              br
+              |для всей семьи!
+            +advantages('header__slider-advantages')
+        .swiper-slide.header__slider-item(style= 'background: url(/assets/img/header/2.png)')
+          .header__slider-info
+            .h2.header__slider-subtitle= 'Торговый центр'
+            .header__slider-title= 'обними'
+            .header__slider-description
+              | Место силы,
+              br
+              | развлечений и шопинга
+              br
+              | для всей семьи!
+            +advantages('header__slider-advantages')
+  .header__socials
+    each soc in headerSocials
+      a.header__socials-item(href='/')= soc.title
+

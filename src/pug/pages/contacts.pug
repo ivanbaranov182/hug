@@ -1,0 +1,29 @@
+extends ../layout/main
+
+block variables
+  - const title = 'ТЦ Обними | test';
+  - const description = 'ТЦ Обними | description';
+  - const pageClass = 'index-page';
+
+block content
+  .container
+    include ../includes/modules/breadcrumbs
+    h1.h1= 'Контакты'
+    .h3.subtitle= 'Торговый Центр «ОБНИМИ» - место силы, развлечений и шопинга для всей семьи!'
+
+    .map
+      .map__info
+        a.map__info-phone(href='8 800 000 00 00')= '8 800 000 00 00'
+        p= 'Обнинск, пересечение магистралей пр-та Маркса и ул. Курчатова'
+        p
+          |с 9.00 до 22.00
+          span.working-status._open= 'Сейчас открыт'
+        a.map__info-email(href='mailto:tco@yandex.ru')= 'tco@yandex.ru'
+        a.button._white.map__info-how(href='/how.html')
+          include ../../assets/img/icons/running-man.svg
+          | Как добраться
+      .map__container
+        img(src='/assets/img/contacts-map.png')
+
+
+    include ../includes/modules/shops-bottom

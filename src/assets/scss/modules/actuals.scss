@@ -1,0 +1,50 @@
+.actuals {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+
+    &-buttons {
+      display: flex;
+      margin-top: 50px;
+    }
+
+    &-button {
+      margin-left: 24px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-height: 0;
+    transition: 0.3s;
+    overflow: hidden;
+
+    &._active {
+      max-height: 900px;
+
+      & .actuals__list-col:nth-child(2) {
+        margin-top: 168px;
+      }
+    }
+
+    &-col {
+      display: flex;
+      flex-direction: column;
+      margin-top: 0;
+      transition: 2s;
+      transition-delay: 0.3s;
+    }
+
+    &-item {
+      height: 334px;
+      &:first-child {
+        margin-bottom: 60px;
+      }
+      &._big {
+        height: 727px;
+      }
+    }
+  }
+}

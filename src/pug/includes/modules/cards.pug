@@ -1,0 +1,14 @@
+- const cards = [{"title": "Zenden","img": "/assets/img/shops/1.png","floor": "2 этаж","icon": "/assets/img/filters/boots.svg"},{"title": "Zolla","img": "/assets/img/shops/2.png","floor": "2 этаж","icon": "/assets/img/filters/shirt.svg"},{"title": "Zenden","img": "/assets/img/shops/1.png","floor": "2 этаж","icon": "/assets/img/filters/boots.svg"},{"title": "Zolla","img": "/assets/img/shops/2.png","floor": "2 этаж","icon": "/assets/img/filters/shirt.svg"},{"title": "Zenden","img": "/assets/img/shops/1.png","floor": "2 этаж","icon": "/assets/img/filters/boots.svg"},{"title": "Zolla","img": "/assets/img/shops/2.png","floor": "2 этаж","icon": "/assets/img/filters/shirt.svg"},{"title": "Zenden","img": "/assets/img/shops/1.png","floor": "2 этаж","icon": "/assets/img/filters/boots.svg"},{"title": "Zolla","img": "/assets/img/shops/2.png","floor": "2 этаж","icon": "/assets/img/filters/shirt.svg"}];
+
+.cards
+  .cards__list
+    each card in cards
+      .cards__item
+        .cards__item-img
+          img(src= card.img)
+        .cards__item-description
+          .cards__item-title= card.title
+          .cards__item-floor= card.floor
+          .cards__item-icon
+            img(src= card.icon)
+  .cards__more.more-button= 'Показать больше'

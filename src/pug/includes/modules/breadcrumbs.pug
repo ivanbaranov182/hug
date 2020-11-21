@@ -1,0 +1,6 @@
+- const breadcrumbsList = [{"title": "Главная", "link": "/"}, {"title": "Магазины", "link": "/test.html"}];
+
+if breadcrumbsList
+  .breadcrumbs
+    each breacrumb in breadcrumbsList
+      a.breadcrumbs__item(href= breacrumb.link)= breacrumb.title

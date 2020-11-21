@@ -1,0 +1,11 @@
+.contacts {
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+
+    &-item {
+      margin-right: 24px;
+    }
+  }
+}

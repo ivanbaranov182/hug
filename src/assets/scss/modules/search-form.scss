@@ -1,0 +1,25 @@
+.search-form {
+  margin-bottom: 44px;
+
+  &__button {
+    position: absolute;
+    background: none;
+    border: none;
+    outline: none;
+  }
+
+  &__input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid $black;
+    outline: none;
+    font-size: 16px;
+    font-weight: 450;
+    padding-bottom: 22px;
+    padding-left: 30px;
+
+    &::placeholder {
+      color: black;
+    }
+  }
+}

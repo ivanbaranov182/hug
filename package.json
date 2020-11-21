@@ -51,6 +51,7 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
+    "swiper": "^6.3.5",
     "vue": "^2.6.10"
   }
 }

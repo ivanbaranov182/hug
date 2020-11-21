@@ -1,0 +1,50 @@
+extends ../layout/main
+
+block variables
+  - const title = 'ТЦ Обними | test';
+  - const description = 'ТЦ Обними | description';
+  - const pageClass = 'index-page';
+
+block content
+  .container
+    include ../includes/modules/breadcrumbs
+    h1.h1= 'как добраться'
+    .h3.subtitle= 'Торговый Центр «ОБНИМИ» - место силы, развлечений и шопинга для всей семьи!'
+
+    .contacts__buttons
+      .button._white.contacts__buttons-item._active
+        include ../../assets/img/icons/running-man.svg
+        | Как добраться
+      .button._white.contacts__buttons-item
+        include ../../assets/img/icons/car.svg
+        | На машине
+      .button._white.contacts__buttons-item
+        include ../../assets/img/icons/parking.svg
+        | Парковка
+      .button._white.contacts__buttons-item
+        include ../../assets/img/icons/bus.svg
+        | Общественный транспорт
+
+    .map
+      .map__info
+        .h3.map__info-title= 'Мы рады Вас видеть в ТЦ Обними'
+        p
+          |ТЦ Обними находится в пешей
+          br
+          |доступности от остановки
+          br
+          |общественного транспорта
+          br
+          |Хлебозавод
+        p
+          |Главный вход находится
+          br
+          |за остановкой
+        .map__info-data
+          .map__info-data__item._js-time= 'Время в пути: ~1 мин'
+          .map__info-data__item._js-distance= 'Расстояние: 120 м'
+      .map__container
+        img(src='/assets/img/contacts-map.png')
+
+
+    include ../includes/modules/shops-bottom

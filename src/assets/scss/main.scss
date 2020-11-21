@@ -55,9 +55,12 @@ ul, li {
   list-style-type: none;
 }
 
+button {
+  padding: 0;
+}
+
 section, .section {
-  position: relative;
-  padding: 25px 0;
+  margin-bottom: $level1;
   @media screen and (max-width: $desktopWidth) {
     padding: 36px 0;
   }
@@ -85,17 +88,17 @@ section, .section {
 .container {
   width: 100%;
   flex: 0 0 auto;
-  position: relative;
   margin: 0 auto;
   max-width: $desktopWidth;
+  min-width: $smPhoneWidth;
   @media screen and (max-width: $smDesktopWidth) {
-    max-width: tableWidth;
+    max-width: $tableWidth;
   }
   @media screen and (max-width: $tableWidth) {
-    max-width: phoneWidth;
+    max-width: $phoneWidth;
   }
   @media screen and (max-width: $phoneWidth) {
-    max-width: smPhoneWidth;
+    max-width: $smPhoneWidth;
   }
 }
 
@@ -103,34 +106,25 @@ section, .section {
   padding: 0 40px;
 }
 
-h1,
-.h1 {
-  font-size: 64px;
-  line-height: 70.4px;
-  font-weight: 400;
-}
-
-h2,
-.h2 {
-  font-size: 24px;
-  line-height: 36px;
-  font-weight: 600;
-}
-
-h3,
-.h3 {
-  font-size: 18px;
-  line-height: 27px;
-  font-weight: 600;
-}
-
-h4,
-.h4 {
-  font-size: 14px;
-  line-height: 23.8px;
-  font-weight: 600;
+.about-page {
+  overflow: hidden;
 }
 
 // Modules
 @import "modules/header";
+@import "modules/extra";
 @import "modules/footer";
+@import "modules/arendators";
+@import "modules/sales-index";
+@import "modules/about-index";
+@import "modules/actuals";
+@import "modules/breadcrumbs";
+@import "modules/advantages";
+@import "modules/shops-bottom";
+@import "modules/map";
+@import "modules/contacts";
+@import "modules/search-form";
+@import "modules/filter";
+@import "modules/cards";
+@import "modules/about";
+@import "modules/about-slider";
