@@ -8,6 +8,10 @@
 
 	&__right {
 		width: 67%;
+		@media screen and (max-width: $smDesktopWidth) {
+			width: 100%;
+			padding-right: 20px;
+		}
 
 		&-top {
 			display: flex;

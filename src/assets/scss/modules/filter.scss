@@ -1,26 +1,23 @@
 .filter {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 100px;
 
   &-list {
     display: flex;
 
     &__item {
-      cursor: pointer;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 48px;
-      height: 48px;
-      border-radius: 100%;
-      border: 1px solid $light-grey2;
       margin-right: 12px;
-      transition: 0.3s;
+    }
+  }
 
-      &._active,
-      &:hover {
-        background: $light-blue;
+  &__block {
+    &._selects {
+      display: flex;
+
+      & > div {
+        margin-right: 60px;
       }
     }
   }

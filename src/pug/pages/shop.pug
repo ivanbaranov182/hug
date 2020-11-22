@@ -4,10 +4,27 @@ block variables
   - const title = 'ТЦ Обними | test';
   - const description = 'ТЦ Обними | description';
   - const pageClass = 'index-page';
+  - const headerType = 'w-bg';
 
 block content
   .container
-    include ../includes/modules/breadcrumbs
+    .shop
+      .shop__description
+        .shop__description-left
+          p= 'Zenden – российский бренд. Фирма основана в 1997 году и первоначально занималась импортом и торговлей обуви из Германии и Китая. Первая производственная фабрика была открыта в 2003 г. В настоящее время является холдингом, которому принадлежат такие торговые марки, как Instreet, Dixer, Mascotte, Thomas Munz и др.'
+          p= 'Фирма имеет как собственные брендовые магазины, так и предлагает бизнес по франшизе. Ассортимент включает коллекции для повседневного пользования, активного отдыха, спортивную и модельную обувь, а также изделия с удобной колодкой для «проблемных» ног. Основное производство товаров сосредоточено в Китае, вся продукция производится с учётом российского климата.'
+        .shop__description-right
+          a.shop__description-icon.icon(href='/shops.html')
+            include ../../assets/img/filters/boots.svg
+          .shop__description-links
+            a.shop__description-link(href='/')= 'Мужская обувь'
+            a.shop__description-link(href='/')= 'Женская обувь'
+            a.shop__description-link(href='/')= 'Детская обувь'
+      .shop__contacts
+        a.shop__contacts-item(href='tel:8 800 000 00 00')= '8 800 000 00 00'
+        .shop__contacts-item= 'с 9.00 до 22.00'
+        a.shop__contacts-item(href='mailto:zenden.ru')= 'zenden.ru'
 
-    p= ''
+      +photo-slider('shop__slider')
+
     include ../includes/modules/shops-bottom

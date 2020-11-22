@@ -92,14 +92,15 @@ section, .section {
   max-width: $desktopWidth;
   min-width: $smPhoneWidth;
   @media screen and (max-width: $smDesktopWidth) {
-    max-width: $tableWidth;
+    //max-width: $tableWidth;
+    padding: 0 10px;
   }
-  @media screen and (max-width: $tableWidth) {
-    max-width: $phoneWidth;
-  }
-  @media screen and (max-width: $phoneWidth) {
-    max-width: $smPhoneWidth;
-  }
+  //@media screen and (max-width: $tableWidth) {
+  //  max-width: $phoneWidth;
+  //}
+  //@media screen and (max-width: $phoneWidth) {
+  //  max-width: $smPhoneWidth;
+  //}
 }
 
 .container-fluid {
@@ -107,7 +108,7 @@ section, .section {
 }
 
 .about-page {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 // Modules
@@ -128,3 +129,6 @@ section, .section {
 @import "modules/cards";
 @import "modules/about";
 @import "modules/about-slider";
+@import "modules/about-events";
+@import "modules/shop";
+@import "modules/hamburger";

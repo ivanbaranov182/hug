@@ -5,6 +5,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    margin-top: 5px;
     margin-bottom: $level2;
   }
 
@@ -29,8 +30,13 @@
     }
   }
 
+  &__filters {
+    margin-right: 8%;
+  }
+
   &__slider {
     overflow: initial;
+    margin-top: 115px;
 
     &-item {
       display: flex;
@@ -48,7 +54,7 @@
         content: '';
         display: block;
         position: absolute;
-        top: 25px;
+        top: 31px;
         width: 48px;
         height: 48px;
         border-radius: 100%;
@@ -106,7 +112,7 @@
         }
 
         & .sales-index__slider-link {
-          bottom: 50px;
+          bottom: 41px;
         }
       }
     }
@@ -114,11 +120,13 @@
     &-info {
       text-align: center;
       padding: 0 50px;
+      margin-top: 20px;
+      margin-bottom: -10px;
     }
 
     &-partner {
       position: absolute;
-      top: 50px;
+      top: 61px;
       font-size: 20px;
     }
 
@@ -127,6 +135,7 @@
       line-height: 27px;
       font-weight: 600;
       text-transform: uppercase;
+      margin-bottom: 10px;
     }
 
     &-link {

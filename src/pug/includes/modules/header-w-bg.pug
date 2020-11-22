@@ -1,0 +1,19 @@
+header.header._w-bg._img
+  .header__top
+    a(href='/').header__logo
+      include ../../../assets/img/logo.svg
+    include ./header__nav
+    include ./header__buttons
+    include ./header__info
+  .header__bottom(style='background: url(/assets/img/header/2.png)')
+    .container
+      .header__bottom-description
+        include ../../includes/modules/breadcrumbs
+        h1.header__bottom-title= 'zenden'
+        a.header__bottom-link(href='/how.html')
+          .header__bottom-link__title
+            |Смотреть
+            br
+            |на схеме
+          .header__bottom-link__icon
+            include ../../../assets/img/arrow-diagonal-top.svg

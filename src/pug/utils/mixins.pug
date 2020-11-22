@@ -1,4 +1,5 @@
 - const aboutSlider = [{"img": "/assets/img/about-index/1.png"},{"img": "/assets/img/about-index/2.png"},{"img": "/assets/img/about-index/3.png"},{"img": "/assets/img/about-index/1.png"},{"img": "/assets/img/about-index/2.png"},{"img": "/assets/img/about-index/3.png"},{"img": "/assets/img/about-index/1.png"},{"img": "/assets/img/about-index/2.png"},{"img": "/assets/img/about-index/3.png"},{"img": "/assets/img/about-index/1.png"},{"img": "/assets/img/about-index/2.png"},{"img": "/assets/img/about-index/3.png"},{"img": "/assets/img/about-index/1.png"},{"img": "/assets/img/about-index/2.png"},{"img": "/assets/img/about-index/3.png"}];
+- const photoSlider = [{"img": "/assets/img/photo/1.png"},{"img": "/assets/img/photo/2.png"},{"img": "/assets/img/photo/3.png"},{"img": "/assets/img/photo/1.png"},{"img": "/assets/img/photo/2.png"},{"img": "/assets/img/photo/3.png"},{"img": "/assets/img/photo/1.png"},{"img": "/assets/img/photo/2.png"},{"img": "/assets/img/photo/3.png"},{"img": "/assets/img/photo/1.png"},{"img": "/assets/img/photo/2.png"},{"img": "/assets/img/photo/3.png"},{"img": "/assets/img/photo/1.png"},{"img": "/assets/img/photo/2.png"},{"img": "/assets/img/photo/3.png"}];
 
 mixin nav-item(title, link)
   li
@@ -36,6 +37,21 @@ mixin about-slider(className)
             | Открытие ТЦ Обними,
             br
             | июнь 2019
+    .about-slider__nav
+      .swiper-button-prev._prev.about-slider__arrow
+        include ../../assets/img/icons/slider-arow-left.svg
+      .about-slider__scroll
+        .swiper-scrollbar
+      .swiper-button-next._next.about-slider__arrow
+        include ../../assets/img/icons/slider-arow-right.svg
+
+mixin photo-slider(className)
+  .swiper-container.about-slider(class= className)
+    .swiper-wrapper
+      each slide in photoSlider
+        .swiper-slide.about-slider__item
+          .about-slider__image
+            img(src=slide.img)
     .about-slider__nav
       .swiper-button-prev._prev.about-slider__arrow
         include ../../assets/img/icons/slider-arow-left.svg

@@ -33,7 +33,17 @@
 
 	&._w-bg {
 		position: relative;
-		margin-bottom: $level1;
+		margin-bottom: $level2;
+
+		&._img {
+			margin-bottom: $level3;
+
+			& .header__bottom {
+				background: grey;
+				height: 578px;
+				padding-top: 220px;
+			}
+		}
 
 		& .header__top {
 			position: absolute;
@@ -43,31 +53,55 @@
 	&__top {
 		height: 100px;
 		width: 100%;
-		padding: 0 40px;
+		padding: 0 57px;
 		margin-top: $level6;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		z-index: 2;
+
+		@media screen and (max-width: 1750px) {
+			padding: 0 20px;
+		}
 	}
 
 	&__bottom {
+		&-description {
+		}
 
+		& .breadcrumbs__item {
+			color: $white;
+		}
+
+		&-link {
+			border: 1px solid $white;
+			padding: 20px 20px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 176px;
+			height: 82px;
+			color: $white;
+
+			&__title {
+
+			}
+		}
 	}
 
 	&__socials {
 		position: absolute;
 		display: flex;
 		top: 50%;
-		margin-top: -160px;
-		right: 60px;
+		margin-top: -223px;
+		right: 76px;
 		transform: rotate(270deg);
 		transform-origin: right 0;
 		z-index: 2;
 
 		&-item {
-			font-size: 13px;
-			margin-right: 50px;
+			font-size: 14px;
+			margin-right: 57px;
 			text-transform: uppercase;
 			color: $white;
 			transition: 0.3s;
@@ -76,6 +110,7 @@
 
 	&__slider {
 		height: 974px;
+		font-family: 'shirotaregular', sans-serif;
 
 		&-item {
 			display: flex;
@@ -86,7 +121,11 @@
 		}
 
 		&-subtitle {
-			margin-bottom: $level7;
+			font-size: 24px;
+			line-height: 38px;
+			font-weight: 600;
+			margin-bottom: 10px;
+			text-transform: uppercase;
 		}
 
 		&-title {
@@ -94,7 +133,7 @@
 			line-height: 120px;
 			text-transform: uppercase;
 			color: $yellow;
-			margin-bottom: 50px;
+			margin-bottom: 60px;
 		}
 
 		&-description {
@@ -108,7 +147,7 @@
 		&-actions {
 			position: absolute;
 			top: 50%;
-			left: 64px;
+			left: 48px;
 		}
 
 		&-pagination {
@@ -166,6 +205,9 @@
 	}
 
 	&__nav {
+		@media screen and (max-width: $desktopWidth) {
+			display: none;
+		}
 		& ul {
 			display: flex;
 			padding: 0;
@@ -175,11 +217,15 @@
 					font-weight: 700;
 					font-size: 13px;
 					line-height: 18.2px;
-					padding: 0 30px;
+					padding: 0 2rem;
 					position: relative;
 					text-transform: uppercase;
 					color: $white;
+					white-space: nowrap;
 					transition: 0.3s;
+					@media screen and (max-width: 1750px) {
+						padding: 0 1rem;
+					}
 
 					&:after {
 						content: '';
@@ -233,7 +279,7 @@
 				color: $white;
 			}
 
-			&._how {
+			&._yellow {
 				background: $yellow;
 
 				&:hover {
@@ -244,19 +290,57 @@
 					color: $black;
 				}
 			}
+
+			&._pink {
+				background: $pink;
+
+				& svg {
+					color: $black;
+				}
+			}
+
+			&._white {
+				background: $white;
+
+				& svg {
+					color: $black;
+				}
+			}
+
+			&._light-blue {
+				background: $light-blue;
+
+				& svg {
+					color: $black;
+				}
+			}
+
+			&._hamburger {
+				display: none;
+				@media screen and (max-width: $desktopWidth) {
+					display: flex;
+				}
+			}
 		}
 	}
 
 	&__info {
 		text-align: right;
+		@media screen and (max-width: $desktopWidth) {
+			margin-left: 10px;
+		}
+
 		&-phone {
 			display: block;
 			color: $white;
 			font-weight: 600;
+			white-space: nowrap;
 		}
+
 		&-email {
 			display: block;
 			color: $white;
+			white-space: nowrap;
 		}
 	}
 }

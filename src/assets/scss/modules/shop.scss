@@ -1,0 +1,82 @@
+.shop {
+  overflow: hidden;
+
+  &__description {
+    margin-bottom: $level2;
+    display: flex;
+    justify-content: space-between;
+
+    &-left {
+      width: 60%;
+    }
+
+    &-right {
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    &-icon {
+      margin-bottom: 18px;
+    }
+
+    &-links {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-link {
+      color: $grey;
+      transition: 0.3s;
+
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid $black;
+    padding-top: 24px;
+    margin-bottom: $level2;
+
+    &-item {
+      color: $black;
+    }
+  }
+
+  &__slider {
+    & .about-slider__item {
+      height: 327px;
+      width: initial;
+
+      &:nth-child(3n+1) {
+        height: 400px;
+      }
+
+      &:nth-child(3n+2) {
+        margin-top: 200px;
+      }
+
+      &:nth-child(3n+3) {
+        margin-top: 100px;
+      }
+    }
+
+    & .about-slider__image {
+      height: initial;
+      margin-bottom: 0;
+
+      & img {
+        position: relative;
+        top: initial;
+        left: initial;
+        right: initial;
+        bottom: initial;
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+- const aboutEvents = [{"title": "Предметы интерьера, сервисы и ARTBasement","floor": "01","text": "Авангардные предметы мебели и декора в Depst и Cosmorelax. Изысканные ароматы для дома Аromadecor. Кроме того, на этаже открыта химчистка и ателье Nikko, а также арт-пространство ARTBasement, где проводятся лекции и выставки молодых художников и дизайнеров. Там же находится Sole Fresh – первая сникер-химчистка в России, которая предлагает услуги по уходу за обувью."},{"title": "Косметика, подарки и гаджеты","floor": "02","text": "На 2-м этаже представлена декоративная косметика и средства для ухода за кожей и волосами, парфюмерия, подарки, аксессуары для дома и разнообразные гаджеты. Слева от входа находится re:Store, где появляются все новинки Apple, а справа — магазин «Фея Розы», посвященный самым нежным и ароматным сортам королевского цветка."}];
+
+.about-events
+  each evt in aboutEvents
+    .about-events__item
+      .about-events__left
+        .about-events__floor
+          .about-events__floor-value= evt.floor
+          .about-events__floor-description= 'этаж'
+        .h4.about-events__title= evt.title
+      .about-events__right
+        .about-events__icon
+          include ../../../assets/img/about-events-icon.svg
+        .about-events__text= evt.text

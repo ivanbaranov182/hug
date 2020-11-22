@@ -241,3 +241,13 @@
 	font-weight: normal;
 	font-style: italic;
 }
+
+@font-face {
+	font-family: 'shirotaregular';
+	src: url('/assets/fonts/Shirota/shirota_regular.eot');
+	src: url('/assets/fonts/Shirota/shirota-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+		url('/assets/fonts/Shirota/shirota-webfont.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('/assets/fonts/Shirota/shirota-webfont.svg#shirotaregular') format('svg'); /* Chrome < 4, Legacy iOS */
+	font-weight: normal;
+	font-style: normal;
+}

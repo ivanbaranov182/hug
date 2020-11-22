@@ -4,11 +4,17 @@
   text-align: center;
 
   &__item {
-    width: 236px;
+    width: 245px;
     margin: 0 55px;
+    @media screen and (max-width: $smDesktopWidth) {
+      width: 20%;
+      margin: 0 20px;
+      line-height: 16.8px;
+      font-size: 12px;
+    }
 
     &-icon {
-      margin-bottom: $level5;
+      margin-bottom: 26px;
     }
   }
 }

@@ -43,6 +43,11 @@ const headerSwiper = new Swiper('.header__slider', {
 })
 
 
+document.querySelector('.hamburger').addEventListener('click', function () {
+  this.classList.toggle('_active');
+});
+
+
 const actualsButtons = document.querySelectorAll('.actuals__top-button');
 actualsButtons.forEach((actualsButton, index) => {
   actualsButton.addEventListener('click', function() {
@@ -78,21 +83,35 @@ aboutButtons.forEach((aboutButton, index) => {
   });
 });
 
+const selects = document.querySelectorAll('.__select');
+selects.forEach((select) => {
+  const selectSingle_title = select.querySelector('.__select__title');
+  const selectSingle_labels = select.querySelectorAll('.__select__label');
+  const selectSingle_inputs = select.querySelectorAll('.__select__input');
 
-// todo all selects on page
-const selectSingle = document.querySelector('.__select');
-const selectSingle_title = selectSingle.querySelector('.__select__title');
-const selectSingle_labels = selectSingle.querySelectorAll('.__select__label');
-
-// Toggle menu
-selectSingle_title.addEventListener('click', () => {
-  selectSingle.classList.toggle('active')
-});
-
-// Close when click to option
-for (let i = 0; i < selectSingle_labels.length; i++) {
-  selectSingle_labels[i].addEventListener('click', (evt) => {
-    selectSingle_title.textContent = evt.target.textContent;
-    selectSingle.classList.remove('active')
+  // Toggle menu
+  selectSingle_title.addEventListener('click', () => {
+    if ('active' === select.getAttribute('data-state')) {
+      select.setAttribute('data-state', '');
+    } else {
+      select.setAttribute('data-state', 'active');
+    }
   });
-}
+
+  // Close when click to option
+  for (let i = 0; i < selectSingle_labels.length; i++) {
+    selectSingle_labels[i].addEventListener('click', (evt) => {
+      evt.currentTarget.previousSibling.checked = true;
+      selectSingle_title.textContent = evt.target.textContent;
+      select.setAttribute('data-state', '');
+    });
+  }
+
+  for (let i = 0; i < selectSingle_inputs.length; i++) {
+    selectSingle_inputs[i].checked = false;
+  }
+
+  // Set input checked
+
+
+});

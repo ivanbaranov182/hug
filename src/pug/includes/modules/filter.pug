@@ -3,17 +3,26 @@
 .filter
   .filter__block.filter-list.sales-index__filters
     each filter in filters
-      a.filter-list__item.sales-index__filters-item(href='/')
+      a.icon.filter-list__item.sales-index__filters-item(href='/')
         img(src= filter.icon)
 
-  .filter__block
-    .__select
-      .__select__title
+  .filter__block._selects
+    .__select(data-state="")
+      .__select__title= 'Этаж'
       .__select__content
-        input.__select__input(type='radio', name='singleSelect', data-value='Option 0')
-        label.__select__label= "Option 0"
-        input.__select__input(type='radio', name='singleSelect', data-value='Option 0')
-        label.__select__label= "Option 1"
+        input.__select__input(type='radio', name='floor', data-value='Option 0', checked)
+        label.__select__label= 'Этаж 1'
+        input.__select__input(type='radio', name='floor', data-value='Option 1')
+        label.__select__label= 'Этаж 2'
+    .__select(data-state="")
+      .__select__title= 'Для всех'
+      .__select__content
+        input.__select__input(type='radio', name='for', data-value='Option 0', checked)
+        label.__select__label= 'Для взрослых'
+        input.__select__input(type='radio', name='for', data-value='Option 1')
+        label.__select__label= 'Для детей'
+        input.__select__input(type='radio', name='for', data-value='Option 1')
+        label.__select__label= 'Для животных'
 
   .filter__block
     label.checkbox

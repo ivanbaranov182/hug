@@ -91,6 +91,9 @@ h4,
   outline: none;
   cursor: pointer;
   transition: 0.3s;
+  @media screen and (max-width: $tableWidth) {
+    height: 32px;
+  }
 
   &._white {
     background: none;
@@ -125,6 +128,11 @@ h4,
   font-size: 16px;
   outline: none;
   background: none;
+  @media screen and (max-width: $tableWidth) {
+    height: 32px;
+    padding: 0 18px;
+    font-size: 12px;
+  }
 
   &._white {
     color: $white;
@@ -161,16 +169,50 @@ h4,
   }
 }
 
+.icon {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  border: 1px solid $light-grey2;
+  transition: 0.3s;
+
+  &._active,
+  &:hover {
+    background: $light-blue;
+  }
+}
+
 .form {
   background: $blue;
   color: $white;
   padding: $level5 48px;
+  @media screen and (max-width: $smDesktopWidth) {
+    padding: 15px 25px;
+  }
+  @media screen and (max-width: $tableWidth) {
+    padding: 32px;
+  }
 
   &__title {
     font-size: 30px;
     font-weight: 600;
     line-height: 45px;
     text-transform: uppercase;
+    white-space: nowrap;
+    @media screen and (max-width: $smDesktopWidth) {
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      line-height: 36px;
+      & svg {
+        margin-right: 8px;
+        color: $pink;
+      }
+    }
 
     & img {
       margin-right: 15px;
@@ -181,6 +223,9 @@ h4,
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: $level6;
+    @media screen and (max-width: $smDesktopWidth) {
+      font-size: 12px;
+    }
   }
 
   &__policy {
@@ -287,12 +332,12 @@ h4,
 .__select {
   position: relative;
   display: flex;
-  width: 230px;
-  height: 40px;
+  width: 177px;
+  height: 48px;
   margin: 0 auto;
   z-index: 1;
 
-  &.active {
+  &[data-state="active"] {
     .__select__title {
       &::before {
         transform: translate(-3px, -50%) rotate(-45deg);
@@ -309,9 +354,8 @@ h4,
     }
 
     .__select__label {
-      max-height: 40px;
+      max-height: 48px;
       border-width: 1px;
-
       &::before {
         opacity: 1;
       }
@@ -325,12 +369,9 @@ h4,
   width: 100%;
   height: 100%;
   padding: 8px 16px;
-
-  border-radius: 5px;
-  border: solid 1px #c7ccd1;
-
+  border-radius: 50px;
+  border: solid 1px $black;
   cursor: pointer;
-
   z-index: 2;
 
   &::before,
@@ -362,18 +403,18 @@ h4,
 
 .__select__content {
   position: absolute;
-  top: 40px;
-  left: 3px;
+  top: 48px;
+  left: 0;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  width: calc(100% - 6px);
+  width: 100%;
   background-color: #ffffff;
   border: 1px solid rgba(#c7ccd1, 0);
   border-top-width: 0;
   border-bottom-width: 0;
-  border-top: none;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  //border-top: none;
+  border-radius: 5px;
   transition: all 0.3s ease-out;
   z-index: 1;
 }
@@ -398,12 +439,10 @@ h4,
   display: flex;
   align-items: center;
   width: 100%;
-  height: 40px;
+  height: 48px;
   max-height: 0;
   padding: 0 16px;
-
   transition: all 0.2s ease-out;
-
   cursor: pointer;
 
   & + input + & {
@@ -412,30 +451,24 @@ h4,
 
   &:hover {
     background-color: #D8093A !important;
-
     color: #ffffff;
   }
 
   &::before {
     content: attr(data-value);
-
     transition: all 0.2s ease-out;
-
     opacity: 0;
   }
   &::after {
     position: absolute;
-    top: -40px;
+    top: -48px;
     left: 0;
-
     display: flex;
     align-items: center;
     width: 200px;
-    height: 40px;
+    height: 48px;
     padding: 8px 16px;
-
     color: #333333;
-
     z-index: -1;
   }
 }

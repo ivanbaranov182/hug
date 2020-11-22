@@ -12,16 +12,16 @@
   &__description {
     display: flex;
     align-items: flex-end;
+    justify-content: space-between;
     margin-bottom: $level2;
 
     &-left {
-      width: 50%;
       height: 100%;
       display: flex;
     }
 
     &-right {
-      width: 50%;
+      width: 56%;
       column-count: 2;
       column-gap: 61px
     }
