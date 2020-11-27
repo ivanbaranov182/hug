@@ -1,5 +1,5 @@
 - const footerNav = [{"title": "о центре","link": "/about.html"},{"title": "Магазины","link": "/shops.html"},{"title": "Еда","link": "/"},{"title": "Сервис","link": "/"},{"title": "Развлечения","link": "/"},{"title": "Для детей","link": "/"},{"title": "Аренда","link": "/"},{"title": "Безопасность","link": "/"},{"title": "Контакты","link": "/contacts.html"}];
-- const footerSocials = [{"name": "Facebook","link": "/"},{"name": "vkontakte","link": "/"},{"name": "instagram","link": "/"}];
+- const footerSocials = [{"name": "Facebook","link": "/", "icon": "/assets/img/facebook.svg"},{"name": "vkontakte","link": "/", "icon": "/assets/img/vk.svg"},{"name": "instagram","link": "/", "icon": "/assets/img/instagram.svg"}];
 
 footer.footer
   .container
@@ -14,7 +14,9 @@ footer.footer
                 +nav-item(item.title, item.link)
           .footer__socials
             each soc in footerSocials
-              a.footer__socials-item.link(href=soc.link)= soc.name
+              a.footer__socials-item.link(href=soc.link)
+                img(src= soc.icon)
+                span= soc.name
             a.button._white.footer__socials-how(href='/how.html')
               include ../../../assets/img/icons/running-man.svg
               |Как добраться

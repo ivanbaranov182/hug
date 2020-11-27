@@ -1,5 +1,8 @@
 .search-form {
   margin-bottom: 44px;
+  @media screen and (max-width: $tableWidth) {
+    margin-bottom: 30px;
+  }
 
   &__button {
     position: absolute;

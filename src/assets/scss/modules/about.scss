@@ -3,19 +3,29 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 40px;
+    @media screen and (max-width: $smTableWidth) {
+      margin-bottom: 20px;
+    }
 
     &-item {
       margin-right: 24px;
+      @media screen and (max-width: $smTableWidth) {
+        margin-bottom: 10px;
+      }
     }
   }
 
   &__description {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: $level2;
 
     &-text {
       width: 70%;
+      @media screen and (max-width: $phoneWidth) {
+        width: 100%;
+      }
     }
 
     &-link {
@@ -26,6 +36,10 @@
       height: 176px;
       border: 1px solid $black;
       padding: 20px 24px;
+      @media screen and (max-width: $smDesktopWidth) {
+        width: 126px;
+        height: 126px;
+      }
     }
 
     &-icon {
@@ -41,5 +55,19 @@
 
   &__advantages {
     margin-bottom: 170px;
+    @media screen and (max-width: $smDesktopWidth) {
+      margin-bottom: 50px;
+    }
+
+    & .advantages__item {
+      @media screen and (max-width: $smTableWidth) {
+        width: 30%;
+        margin: 0 1%;
+      }
+      @media screen and (max-width: $phoneWidth) {
+        width: 100%;
+        margin: 0 0 20px;
+      }
+    }
   }
 }

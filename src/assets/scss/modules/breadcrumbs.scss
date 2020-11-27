@@ -1,6 +1,7 @@
 .breadcrumbs {
 
   &__item {
+    display: inline-block;
     color: $grey;
 
     &:after {

@@ -1,9 +1,15 @@
 .arendators {
+  @media screen and (max-width: $phoneWidth) {
+    margin-bottom: 62px;
+  }
   &__list {
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
     padding-right: 200px;
+    @media screen and (max-width: $tableWidth) {
+      padding-right: 0;
+    }
 
     &-img {
       position: absolute;
@@ -12,10 +18,12 @@
       height: 100%;
       min-height: 646px;
       width: 100%;
-      background: url('');
       background-repeat: no-repeat;
       background-position: right 0;
       z-index: -1;
+      @media screen and (max-width: $tableWidth) {
+        display: none;
+      }
     }
   }
 
@@ -23,6 +31,10 @@
     position: relative;
     margin-left: -30px;
     margin-right: 20px;
+    @media screen and (max-width: $tableWidth) {
+      margin-left: -27px;
+      margin-right: 14px;
+    }
 
     & a {
       position: relative;
@@ -34,6 +46,14 @@
       text-transform: uppercase;
       color: $black;
       transition: 0.3s;
+      @media screen and (max-width: $tableWidth) {
+        font-size: 18px;
+        line-height: 27px;
+      }
+      @media screen and (max-width: $tableWidth) {
+        padding-left: 26px;
+        padding-right: 26px;
+      }
 
       &:hover {
         -webkit-text-fill-color: white; /* Will override color (regardless of order) */
@@ -52,6 +72,10 @@
       height: 12px;
       background: $pink;
       border-radius: 100%;
+      @media screen and (max-width: $phoneWidth) {
+        width: 8px;
+        height: 8px;
+      }
     }
   }
 }

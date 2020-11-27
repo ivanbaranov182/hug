@@ -1,4 +1,6 @@
 nav.header__nav
+  .header__buttons-item._light-blue._hamburger
+    include ./hamburger
   ul
     each item in headerNav
       +nav-item(item.title, item.link)

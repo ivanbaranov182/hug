@@ -16,10 +16,11 @@ header.header._w-bg
         include ../../../assets/img/icons/arrow-down.svg
     .swiper-container.header__slider
       .swiper-wrapper
-        .swiper-slide.header__slider-item(style= 'background: url(/assets/img/header/1.png)')
+        .swiper-slide.header__slider-item(style= 'background-image: url(/assets/img/header/1.png)')
           .header__slider-info
             .header__slider-subtitle= 'Торговый центр'
             .header__slider-title= 'обними'
+            .header__slider-dots
             .header__slider-description
               |Место силы,
               br
@@ -27,7 +28,7 @@ header.header._w-bg
               br
               |для всей семьи!
             +advantages('header__slider-advantages')
-        .swiper-slide.header__slider-item(style= 'background: url(/assets/img/header/2.png)')
+        .swiper-slide.header__slider-item(style= 'background-image: url(/assets/img/header/2.png)')
           .header__slider-info
             .header__slider-subtitle= 'Торговый центр'
             .header__slider-title= 'обними'

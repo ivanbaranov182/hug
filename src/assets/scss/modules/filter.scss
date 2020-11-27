@@ -1,23 +1,66 @@
 .filter {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 100px;
+  @media screen and (max-width: $desktopWidth) {
+    justify-content: flex-start;
+    align-items: baseline;
+  }
+  @media screen and (max-width: $tableWidth) {
+    margin-bottom: 40px;
+  }
+  @media screen and (max-width: $smTableWidth) {
+    overflow: hidden;
+  }
 
   &-list {
     display: flex;
 
     &__item {
       margin-right: 12px;
+      @media screen and (max-width: $phoneWidth) {
+        margin-right: 8px;
+      }
     }
   }
 
   &__block {
+    @media screen and (max-width: $desktopWidth) {
+      order: 3;
+      margin-top: 0;
+    }
+    @media screen and (max-width: $smTableWidth) {
+      margin-bottom: 20px;
+    }
     &._selects {
       display: flex;
+      @media screen and (max-width: $desktopWidth) {
+        margin-bottom: 30px;
+      }
+      @media screen and (max-width: $tableWidth) {
+        margin-bottom: 20px;
+      }
 
       & > div {
         margin-right: 60px;
+        @media screen and (max-width: $tableWidth) {
+          margin-right: 20px;
+        }
+        @media screen and (max-width: $phoneWidth) {
+          margin-right: 15px;
+        }
+      }
+    }
+    &:first-child {
+      @media screen and (max-width: $desktopWidth) {
+        width: 100%;
+        order: 4;
+        margin-bottom: 0;
+      }
+      @media screen and (max-width: $smTableWidth) {
+        width: auto;
       }
     }
   }

@@ -1,0 +1,14 @@
+.modal
+  form.form.send-form(style='display: none')
+    .modal-close
+      include ../../../assets/img/cancel.svg
+    .form__title
+      include ../../../assets/img/icons/title-bell.svg
+      | Будь в курсе
+    .form__description= 'актуальных акций и событий'
+    input.form__input.input._white(placeholder='Оставьте ваш email')
+    .form__policy
+      | Нажимая “Подписаться” соглашаюсь с правилами
+      <br />
+      | обработки персональных данных
+    button.form__button.button(type='submit')= 'Подписаться'

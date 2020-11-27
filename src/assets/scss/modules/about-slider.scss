@@ -3,6 +3,18 @@
 
   &__item {
     width: 649px;
+    @media screen and (max-width: $tableWidth) {
+      width: 469px;
+    }
+    @media screen and (max-width: $smTableWidth) {
+      width: 369px;
+    }
+    @media screen and (max-width: $tableWidth) {
+      width: 289px;
+    }
+    @media screen and (max-width: $phoneWidth) {
+      width: 240px;
+    }
   }
 
   &__image {
@@ -10,6 +22,17 @@
     height: 400px;
     overflow: hidden;
     margin-bottom: $level6;
+    @media screen and (max-width: $tableWidth) {
+      height: 250px;
+    }
+    @media screen and (max-width: $smTableWidth) {
+      height: 180px;
+      margin-bottom: 8px;
+    }
+    @media screen and (max-width: $phoneWidth) {
+      height: 148px;
+    }
+
     & img {
       width: 100%;
       height: auto;
@@ -28,12 +51,21 @@
 
   & .swiper-wrapper {
     margin-bottom: $level3;
+    @media screen and (max-width: $smTableWidth) {
+      margin-bottom: 40px;
+    }
+    @media screen and (max-width: $phoneWidth) {
+      margin-bottom: 40px;
+    }
   }
 
   &__nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media screen and (max-width: $smTableWidth) {
+      display: none;
+    }
 
     &:hover {
       & .swiper-scrollbar-drag {
@@ -81,5 +113,11 @@
 
   &__scroll{
     width: 85%;
+    @media screen and (max-width: $tableWidth) {
+      width: 75%;
+    }
+    @media screen and (max-width: $smTableWidth) {
+      width: 65%;
+    }
   }
 }

@@ -5,8 +5,15 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    flex-wrap: wrap;
     margin-top: 5px;
     margin-bottom: $level2;
+    @media screen and (max-width: $smDesktopWidth) {
+      margin-bottom: 0;
+    }
+    @media screen and (max-width: $smTableWidth) {
+      align-items: center;
+    }
   }
 
   &__title {
@@ -16,6 +23,9 @@
   &__buttons {
     display: flex;
     flex-direction: row;
+    @media screen and (max-width: $smTableWidth) {
+      margin-top: 20px;
+    }
   }
 
   &__button {
@@ -24,6 +34,9 @@
     left: initial;
     right: initial;
     margin-left: 24px;
+    @media screen and (max-width: $smTableWidth) {
+      margin-left: 8px;
+    }
 
     &:after {
       display: none;
@@ -31,12 +44,26 @@
   }
 
   &__filters {
-    margin-right: 8%;
+    @media screen and (max-width: $desktopWidth) {
+      margin-right: 0;
+      width: 100%;
+      order: 1;
+      margin-top: 20px;
+    }
+    @media screen and (max-width: $phoneWidth) {
+      width: auto;
+    }
   }
 
   &__slider {
     overflow: initial;
     margin-top: 115px;
+    @media screen and (max-width: $smDesktopWidth) {
+      margin-top: 70px;
+    }
+    @media screen and (max-width: $smTableWidth) {
+      margin-top: 20px;
+    }
 
     &-item {
       display: flex;
@@ -49,6 +76,20 @@
       padding: 30px;
       border-radius: 100%;
       border: 1px solid $black;
+      @media screen and (max-width: $smTableWidth) {
+        width: 343px;
+        height: 343px;
+      }
+      @media screen and (max-width: $smTableWidth) {
+        width: 283px;
+        height: 283px;
+        padding: 15px;
+      }
+      @media screen and (max-width: $phoneWidth) {
+        width: 242px;
+        height: 242px;
+        padding: 23px;
+      }
 
       &:before {
         content: '';
@@ -60,6 +101,14 @@
         border-radius: 100%;
         background: $coral;
         z-index: -1;
+        @media screen and (max-width: $smTableWidth) {
+          top: 18px;
+        }
+
+        @media screen and (max-width: $smTableWidth) {
+          width: 32px;
+          height: 32px;
+        }
       }
 
       &:after {
@@ -122,12 +171,21 @@
       padding: 0 50px;
       margin-top: 20px;
       margin-bottom: -10px;
+      @media screen and (max-width: $smTableWidth) {
+        text-align: center;
+        padding: 0;
+        margin-bottom: -10px;
+      }
     }
 
     &-partner {
       position: absolute;
       top: 61px;
       font-size: 20px;
+      @media screen and (max-width: $smTableWidth) {
+        font-size: 16px;
+        top: 33px;
+      }
     }
 
     &-title {
@@ -136,6 +194,21 @@
       font-weight: 600;
       text-transform: uppercase;
       margin-bottom: 10px;
+      @media screen and (max-width: $smTableWidth) {
+        font-size: 14px;
+        line-height: 21px;
+        margin-bottom: 7px;
+      }
+      @media screen and (max-width: $phoneWidth) {
+        font-size: 14px;
+      }
+    }
+
+    &-description {
+      @media screen and (max-width: $phoneWidth) {
+        font-size: 12px;
+        line-height: 16.8px;
+      }
     }
 
     &-link {

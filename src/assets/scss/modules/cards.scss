@@ -10,6 +10,20 @@
     grid-column-gap: 3%;
     grid-row-gap: 48px;
     margin-bottom: 80px;
+    @media screen and (max-width: $desktopWidth) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    @media screen and (max-width: $smDesktopWidth) {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-row-gap: 20px;
+    }
+    @media screen and (max-width: $tableWidth) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media screen and (max-width: $phoneWidth) {
+      grid-template-columns: 1fr;
+      margin-bottom: 40px;
+    }
   }
 
   &__item {
@@ -20,7 +34,10 @@
     padding: 20px;
 
     &-img {
-
+      min-height: 56px;
+      & img {
+        width: 100%;
+      }
     }
 
     &-title {

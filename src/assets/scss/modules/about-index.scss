@@ -1,11 +1,17 @@
 .about-index {
   overflow: hidden;
+  @media screen and (max-width: $phoneWidth) {
+    margin-bottom: 19px;
+  }
   &__title {
     margin-bottom: 0;
     & span {
       font-size: 38px;
       white-space: nowrap;
       line-height: 1;
+      @media screen and (max-width: $smTableWidth) {
+        font-size: 23px;
+      }
     }
   }
 
@@ -13,17 +19,36 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin-bottom: $level2;
+    @media screen and (max-width: $smDesktopWidth) {
+      margin-bottom: 40px;
+    }
+    @media screen and (max-width: $tableWidth) {
+      margin-bottom: 10px;
+    }
+    @media screen and (max-width: $phoneWidth) {
+      margin-bottom: 0;
+    }
 
     &-left {
       height: 100%;
       display: flex;
+      @media screen and (max-width: $smDesktopWidth) {
+        margin-bottom: 20px;
+      }
     }
 
     &-right {
       width: 56%;
       column-count: 2;
-      column-gap: 61px
+      column-gap: 61px;
+      @media screen and (max-width: $smDesktopWidth) {
+        width: 100%;
+      }
+      @media screen and (max-width: $tableWidth) {
+        column-count: initial;
+      }
     }
   }
 }

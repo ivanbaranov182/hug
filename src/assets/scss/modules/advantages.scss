@@ -2,6 +2,11 @@
   display: flex;
   justify-content: center;
   text-align: center;
+  @media screen and (max-width: $smTableWidth) {
+    flex-wrap: wrap;
+    height: 120px;
+    overflow: hidden;
+  }
 
   &__item {
     width: 245px;
@@ -15,6 +20,15 @@
 
     &-icon {
       margin-bottom: 26px;
+      @media screen and (max-width: $tableWidth) {
+        margin-bottom: 5px;
+      }
+
+      & svg {
+        @media screen and (max-width: $tableWidth) {
+          width: 20px;
+        }
+      }
     }
   }
 }

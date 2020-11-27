@@ -12,6 +12,22 @@ h1,
   font-weight: 400;
   text-transform: uppercase;
   margin-bottom: 50px;
+  @media screen and (max-width: $tableWidth) {
+    font-size: 53px;
+    line-height: 60.4px;
+    margin-bottom: 25px;
+  }
+  @media screen and (max-width: $smTableWidth) {
+    font-size: 40px;
+    line-height: 50.4px;
+    margin-bottom: 15px;
+  }
+  @media screen and (max-width: $smTableWidth) {
+    font-size: 32px;
+    line-height: 48.4px;
+    margin-bottom: 10px;
+  }
+
 
   &__count {
     position: absolute;
@@ -26,6 +42,25 @@ h1,
     font-size: 18px;
     background: $yellow;
     z-index: -1;
+    @media screen and (max-width: $smDesktopWidth) {
+      top: -20px;
+      right: -35px;
+      width: 60px;
+      height: 60px;
+    }
+    @media screen and (max-width: $smDesktopWidth) {
+      top: -10px;
+      right: -25px;
+      width: 40px;
+      height: 40px;
+    }
+    @media screen and (max-width: $smTableWidth) {
+      top: -7px;
+      right: -22px;
+      width: 30px;
+      height: 30px;
+      font-size: 13px;
+    }
   }
 }
 
@@ -36,6 +71,11 @@ h2,
   font-weight: 600;
   margin-bottom: 27px;
   text-transform: uppercase;
+  @media screen and (max-width: $smTableWidth) {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 13px;
+  }
 }
 
 h3,
@@ -69,6 +109,10 @@ h4,
   border: 1px solid $light-grey;
   border-radius: 32px;
   transition: 0.3s;
+  @media screen and (max-width: $tableWidth) {
+    height: 32px;
+    min-width: 100px;
+  }
 
   &:hover {
     background: $white;
@@ -93,6 +137,16 @@ h4,
   transition: 0.3s;
   @media screen and (max-width: $tableWidth) {
     height: 32px;
+  }
+  @media screen and (max-width: $smTableWidth) {
+    height: 36px;
+    min-width: 120px;
+    padding: 0 10px;
+    font-size: 12px;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    min-width: 126px;
+    margin-right: 8px;
   }
 
   &._white {
@@ -133,6 +187,13 @@ h4,
     padding: 0 18px;
     font-size: 12px;
   }
+  @media screen and (max-width: $smTableWidth) {
+    height: 36px;
+    max-width: 180px;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    max-width: 230px;
+  }
 
   &._white {
     color: $white;
@@ -157,6 +218,18 @@ h4,
   background: none;
   cursor: pointer;
   transition: 0.3s;
+  @media screen and (max-width: $smDesktopWidth) {
+    width: 90px;
+    height: 90px;
+  }
+  @media screen and (max-width: $smTableWidth) {
+    width: 60px;
+    height: 60px;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    width: 44px;
+    height: 44px;
+  }
 
   &._right {
     justify-content: flex-start;
@@ -166,6 +239,16 @@ h4,
   &:hover {
     border: 1px solid $light-grey2;
     color: $light-grey2;
+  }
+
+  & img,
+  & svg {
+    @media screen and (max-width: $smTableWidth) {
+      width: 40px;
+    }
+    @media screen and (max-width: $phoneWidth) {
+      width: 27px;
+    }
   }
 }
 
@@ -179,14 +262,26 @@ h4,
   border-radius: 100%;
   border: 1px solid $light-grey2;
   transition: 0.3s;
+  @media screen and (max-width: $phoneWidth) {
+    width: 36px;
+    height: 36px;
+  }
 
   &._active,
   &:hover {
     background: $light-blue;
   }
+
+  & img,
+  & svg {
+    @media screen and (max-width: $phoneWidth) {
+      max-width: 21px;
+    }
+  }
 }
 
 .form {
+  position: relative;
   background: $blue;
   color: $white;
   padding: $level5 48px;
@@ -195,6 +290,9 @@ h4,
   }
   @media screen and (max-width: $tableWidth) {
     padding: 32px;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    padding: 32px 28px 32px;
   }
 
   &__title {
@@ -232,6 +330,9 @@ h4,
     font-size: 13px;
     line-height: 18.2px;
     margin-bottom: $level6;
+    @media screen and (max-width: $smTableWidth) {
+      font-size: 11px;
+    }
   }
 }
 
@@ -242,6 +343,25 @@ h4,
   line-height: 70.4px;
   padding-left: 100px;
   text-transform: uppercase;
+  @media screen and (max-width: $tableWidth) {
+    margin-bottom: 40px;
+  }
+  @media screen and (max-width: $smTableWidth) {
+    margin-bottom: 20px;
+    font-size: 40px;
+    line-height: 50.4px;
+    padding-left: 60px;
+  }
+  @media screen and (max-width: $xsTableWidth) {
+    font-size: 40px;
+    line-height: 42.4px;
+    padding-left: 50px;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    font-size: 31px;
+    line-height: 31.8px;
+    padding-left: 25px;
+  }
 
   &:before {
     content: '';
@@ -254,6 +374,23 @@ h4,
     background: $yellow;
     border-radius: 100%;
     z-index: -1;
+    @media screen and (max-width: $smTableWidth) {
+      width: 60px;
+      height: 60px;
+      left: 13px;
+    }
+    @media screen and (max-width: $smTableWidth) {
+      width: 50px;
+      height: 50px;
+      top: 17px;
+      left: 23px;
+    }
+    @media screen and (max-width: $phoneWidth) {
+      width: 40px;
+      height: 40px;
+      top: 9px;
+      left: 7px;
+    }
   }
 
   & span {
@@ -262,6 +399,15 @@ h4,
     -webkit-text-fill-color: white; /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
+    @media screen and (max-width: $smTableWidth) {
+      margin-left: -50px;
+    }
+    @media screen and (max-width: $xsTableWidth) {
+      margin-left: -40px;
+    }
+    @media screen and (max-width: $phoneWidth) {
+      margin-left: -25px;
+    }
   }
 }
 
@@ -308,6 +454,9 @@ h4,
 
 .subtitle {
   margin-bottom: 50px;
+  @media screen and (max-width: $tableWidth) {
+    margin-bottom: 20px;
+  }
 }
 
 .working-status {
@@ -327,6 +476,10 @@ h4,
   text-align: center;
   border: 1px solid $black;
   cursor: pointer;
+  @media screen and (max-width: $tableWidth) {
+    width: 120px;
+    height: 120px;
+  }
 }
 
 .__select {
@@ -336,6 +489,10 @@ h4,
   height: 48px;
   margin: 0 auto;
   z-index: 1;
+  @media screen and (max-width: $phoneWidth) {
+    height: 38px;
+    width: 132px;
+  }
 
   &[data-state="active"] {
     .__select__title {
@@ -413,7 +570,6 @@ h4,
   border: 1px solid rgba(#c7ccd1, 0);
   border-top-width: 0;
   border-bottom-width: 0;
-  //border-top: none;
   border-radius: 5px;
   transition: all 0.3s ease-out;
   z-index: 1;

@@ -4,10 +4,20 @@
   &__description {
     margin-bottom: $level2;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    @media screen and (max-width: $smDesktopWidth) {
+      margin-bottom: 40px;
+    }
+    @media screen and (max-width: $phoneWidth) {
+      justify-content: flex-end;
+    }
 
     &-left {
       width: 60%;
+      @media screen and (max-width: $phoneWidth) {
+        width: 100%;
+      }
     }
 
     &-right {
@@ -15,6 +25,10 @@
       display: flex;
       flex-direction: column;
       align-items: flex-end;
+      @media screen and (max-width: $phoneWidth) {
+        order: -1;
+        margin: 20px;
+      }
     }
 
     &-icon {
@@ -42,7 +56,9 @@
     border-top: 1px solid $black;
     padding-top: 24px;
     margin-bottom: $level2;
-
+    @media screen and (max-width: $smDesktopWidth) {
+      margin-bottom: 70px;
+    }
     &-item {
       color: $black;
     }
@@ -52,23 +68,55 @@
     & .about-slider__item {
       height: 327px;
       width: initial;
+      @media screen and (max-width: $smDesktopWidth) {
+        height: 257px;
+      }
+      @media screen and (max-width: $smDesktopWidth) {
+        height: 177px;
+      }
+      @media screen and (max-width: $phoneWidth) {
+        height: 120px;
+      }
 
       &:nth-child(3n+1) {
         height: 400px;
+        @media screen and (max-width: $smDesktopWidth) {
+          height: 300px;
+        }
+        @media screen and (max-width: $smTableWidth) {
+          height: 220px;
+        }
+        @media screen and (max-width: $phoneWidth) {
+          height: 150px;
+        }
       }
 
       &:nth-child(3n+2) {
         margin-top: 200px;
+        @media screen and (max-width: $smDesktopWidth) {
+          margin-top: 110px;
+        }
+        @media screen and (max-width: $smTableWidth) {
+          margin-top: 50px;
+        }
       }
 
       &:nth-child(3n+3) {
         margin-top: 100px;
+        @media screen and (max-width: $smDesktopWidth) {
+          margin-top: 50px;
+        }
+        @media screen and (max-width: $smTableWidth) {
+          margin-top: 30px;
+        }
       }
     }
 
     & .about-slider__image {
-      height: initial;
+      height: 100%;
       margin-bottom: 0;
+      overflow: hidden;
+      max-width: 590px;
 
       & img {
         position: relative;
@@ -76,6 +124,8 @@
         left: initial;
         right: initial;
         bottom: initial;
+        height: 100%;
+        width: initial;
       }
     }
   }
